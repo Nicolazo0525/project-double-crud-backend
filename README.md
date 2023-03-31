@@ -7,7 +7,7 @@ composer install
 npm install
 ```
 
-### Execute app
+## Execute app
 ```bash
 php artisan serve
 ```
