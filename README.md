@@ -3,7 +3,7 @@
 ## Install the dependencies
 ```bash
 composer install
-#and
+# and
 npm install
 ```
 
