@@ -27,5 +27,6 @@ Route::get('book/index/{categories_id}', [BookController::class, 'list']);
 Route::post('book/edit/{id}', [BookController::class, 'update']);
 Route::apiResource('books', BookController::class)->names('books');
 
+Route::apiResource('cities',CityController::class);
 
 

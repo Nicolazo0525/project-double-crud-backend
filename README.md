@@ -7,6 +7,11 @@ composer install
 npm install
 ```
 
+### Execute Migrations
+```bash
+php artisan migrate
+```
+
 ### Execute app
 ```bash
 php artisan serve
