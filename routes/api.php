@@ -20,13 +20,13 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('categories', CategoryController::class)->names('categories');
-Route::post('category/edit/{id}', [CategoryController::class, 'update']);
+Route::middleware(['auth:sanctum'])->apiResource('categories', CategoryController::class)->names('categories');
+Route::middleware(['auth:sanctum'])->post('category/edit/{id}', [CategoryController::class, 'update']);
 
-Route::get('book/index/{categories_id}', [BookController::class, 'list']);
-Route::post('book/edit/{id}', [BookController::class, 'update']);
-Route::apiResource('books', BookController::class)->names('books');
+Route::middleware(['auth:sanctum'])->get('book/index/{categories_id}', [BookController::class, 'list']);
+Route::middleware(['auth:sanctum'])->post('book/edit/{id}', [BookController::class, 'update']);
+Route::middleware(['auth:sanctum'])->apiResource('books', BookController::class)->names('books');
 
-Route::apiResource('cities',CityController::class);
+Route::middleware(['auth:sanctum'])->apiResource('cities',CityController::class);
 
 
