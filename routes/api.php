@@ -21,6 +21,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 
 Route::middleware(['auth:sanctum'])->apiResource('categories', CategoryController::class)->names('categories');
+Route::middleware(['auth:sanctum'])->get('search/{user_id}', [CategoryController::class, 'search']);
 Route::middleware(['auth:sanctum'])->post('category/edit/{id}', [CategoryController::class, 'update']);
 
 Route::middleware(['auth:sanctum'])->get('book/index/{categories_id}', [BookController::class, 'list']);
