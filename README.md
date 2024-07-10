@@ -1,4 +1,4 @@
-# Vue 3 + Vite App (Vue-proyect)
+# Vue 3 + Vite App (Vue-project)
 
 ## Install the dependencies
 ```bash
